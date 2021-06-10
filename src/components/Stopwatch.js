@@ -38,20 +38,20 @@ class Stopwatch extends Component {
     clearInterval(this.watch);
   };
 
-  wait = () => {
-    if (this.running) {
-      this.running = false;
-      clearInterval(this.watch);
-      // dbl-click
-      return;
-    }
+  //   wait = () => {
+  //     if (this.running) {
+  //       this.running = false;
+  //       clearInterval(this.watch);
+  //       // dbl-click
+  //       return;
+  //     }
 
-    this.running = true;
-    this.watch = setTimeout(() => {
-      this.running = false;
-      console.log("fkkkkkkk");
-    }, 300);
-  };
+  //     this.running = true;
+  //     this.watch = setTimeout(() => {
+  //       this.running = false;
+  //       console.log("fkkkkkkk");
+  //     }, 300);
+  //   };
 
   pace = () => {
     this.setState({ currentTimeSec: this.state.currentTimeSec + 1 });
