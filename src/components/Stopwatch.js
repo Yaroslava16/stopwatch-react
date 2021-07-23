@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import StopwatchDisplay from "./StopwatchDisplay";
+// import { Observable } from "rxjs";
 
 class Stopwatch extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      running: false,
-      currentTimeSec: 0,
-      currentTimeMin: 0,
-      currentTimeHours: 0,
-    };
-  }
+  state = {
+    running: false,
+    currentTimeSec: 0,
+    currentTimeMin: 0,
+    currentTimeHours: 0,
+  };
 
   formatTime = (val) => {
     let value = val.toString();
@@ -67,6 +64,11 @@ class Stopwatch extends Component {
   render() {
     return (
       <div className={"stopwatch"}>
+        <StopwatchDisplay
+          useRef="display"
+          {...this.state}
+          formatTime={this.formatTime}
+        />
         {this.state.running === false && (
           <button onClick={this.start}>START</button>
         )}
@@ -75,11 +77,6 @@ class Stopwatch extends Component {
         )}
         <button onClick={this.wait}>WAIT</button>
         <button onClick={this.reset}>RESET</button>
-        <StopwatchDisplay
-          useRef="display"
-          {...this.state}
-          formatTime={this.formatTime}
-        />
       </div>
     );
   }
