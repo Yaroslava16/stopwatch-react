@@ -8,16 +8,16 @@
   width: 120px;
   height: 50px;
   border-radius: 20px;
-  background-color: rgb(7, 7, 7);
+  background-color: black;
   color: #fff;
-  box-shadow: 0 0 40px 40px #050505 inset, 0 0 0 0 #090a0a;
+  box-shadow: 0 0 40px 40px black inset, 0 0 0 0 black;
   transition: all 150ms ease-in-out;
 }
 
 .Btn:hover {
   background-color: #fff;
   color: black;
-  box-shadow: 0 0 10px 0 #060707 inset, 0 0 10px 4px #060708;
+  box-shadow: 0 0 10px 0 black inset, 0 0 10px 4px black;
 }
 
 .Btn:not(:last-child) {
