@@ -1,35 +1,13 @@
-const TimeDisplay = (time) => {
-  let sec = 0;
-  let min = 0;
-  let hours = 0;
+const convertTime = (time) => {
+  const sec = formatTime(Math.floor(time % 60));
+  const hours = formatTime(Math.floor(time / 3600));
+  const min = formatTime(Math.floor(time / 60 - hours * 60));
 
-  //   const pace = () => {
-  //     if (sec >= 60) {
-  //       min += 1;
-  //       sec = 0;
-  //     }
+  const displayTime = `${hours} : ${min} : ${sec}`;
 
-  //     if (min >= 60) {
-  //       hours += 1;
-  //       min = 0;
-  //     }
-  //   };
-
-  const formatTime = (val) => {
-    let value = val.toString();
-    if (value.length < 2) {
-      value = "0" + value;
-    }
-    return value;
-  };
-
-  return (
-    <div className={"stopwatch__display"}>
-      <span>
-        {formatTime(hours)}:{formatTime(min)}:{formatTime(sec)}
-      </span>
-    </div>
-  );
+  return displayTime;
 };
 
-export default TimeDisplay;
+const formatTime = (val) => val.toString().padStart(2, "0");
+
+export default convertTime;

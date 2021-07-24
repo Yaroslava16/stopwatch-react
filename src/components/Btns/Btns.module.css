@@ -1,33 +1,21 @@
-.Conteiner {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-}
-
 .Btn {
   font-size: 25px;
   width: 120px;
   height: 50px;
   border-radius: 20px;
   background-color: black;
-  color: #fff;
+  color: rgb(154, 255, 233);
   box-shadow: 0 0 40px 40px black inset, 0 0 0 0 black;
   transition: all 150ms ease-in-out;
+  cursor: pointer;
 }
 
 .Btn:hover {
-  background-color: #fff;
+  background-color: rgb(154, 255, 233);
   color: black;
   box-shadow: 0 0 10px 0 black inset, 0 0 10px 4px black;
 }
 
 .Btn:not(:last-child) {
   margin-right: 20px;
-}
-
-.third {
-  border-color: #3498db;
-  color: #fff;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
 }

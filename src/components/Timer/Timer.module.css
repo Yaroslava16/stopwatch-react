@@ -1,0 +1,19 @@
+.Conteiner {
+  padding-top: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.Title {
+  margin-bottom: 30px;
+}
+
+.Display {
+  font-size: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+}
+.Btns {
+  display: flex;
+  justify-content: center;
+}
