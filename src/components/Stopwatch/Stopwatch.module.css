@@ -1,0 +1,33 @@
+.Conteiner {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.Btn {
+  font-size: 25px;
+  width: 120px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: rgb(7, 7, 7);
+  color: #fff;
+  box-shadow: 0 0 40px 40px #050505 inset, 0 0 0 0 #090a0a;
+  transition: all 150ms ease-in-out;
+}
+
+.Btn:hover {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 0 10px 0 #060707 inset, 0 0 10px 4px #060708;
+}
+
+.Btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.third {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}

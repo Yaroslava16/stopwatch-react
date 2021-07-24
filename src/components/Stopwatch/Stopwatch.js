@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import StopwatchDisplay from "./StopwatchDisplay";
+import StopwatchDisplay from "../StopwatchDisplay/StopwatchDisplay";
+import styles from "../Stopwatch/Stopwatch.module.css";
 // import { Observable } from "rxjs";
 
 class Stopwatch extends Component {
@@ -63,20 +64,29 @@ class Stopwatch extends Component {
 
   render() {
     return (
-      <div className={"stopwatch"}>
+      <div className={styles.Conteiner}>
+        <h1>Stopwatch</h1>
         <StopwatchDisplay
           useRef="display"
           {...this.state}
           formatTime={this.formatTime}
         />
         {this.state.running === false && (
-          <button onClick={this.start}>START</button>
+          <button className={styles.Btn} onClick={this.start}>
+            START
+          </button>
         )}
         {this.state.running === true && (
-          <button onClick={this.stop}>STOP</button>
+          <button className={styles.Btn} onClick={this.stop}>
+            STOP
+          </button>
         )}
-        <button onClick={this.wait}>WAIT</button>
-        <button onClick={this.reset}>RESET</button>
+        <button className={styles.Btn} onClick={this.wait}>
+          WAIT
+        </button>
+        <button className={styles.Btn} onClick={this.reset}>
+          RESET
+        </button>
       </div>
     );
   }
