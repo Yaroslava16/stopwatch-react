@@ -1,17 +1,18 @@
 import { useRef, useState, useEffect } from "react";
+
 import Display from "../Display";
 import deltaTime from "../../helpers/deltaTime";
 import Btn from "../Btns/Btns";
 import styles from "./Timer.module.css";
 
 const Timer = () => {
-  const intervalId = useRef();
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState(0);
+  const [isRun, setIsRun] = useState(false);
 
   const [clock, setClock] = useState(0);
-  const [isRun, setIsRun] = useState(false);
   const [fixedClock, setFixedClock] = useState(0);
   const [wait, setWait] = useState(0);
+  const intervalId = useRef();
 
   useEffect(() => {
     if (isRun) {
